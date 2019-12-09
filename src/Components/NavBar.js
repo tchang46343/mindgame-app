@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 
 export default class NavBar extends React.Component {
@@ -6,9 +7,13 @@ export default class NavBar extends React.Component {
     return (
       <div className="NavigationContent">
         <nav className="main">
-          <button className="NewAccount">Create Account</button>
+          <Link to="newaccount" className="NewAccount">
+            Create Account
+          </Link>
           {/* <img src=""></img> */}
-          <button className="Login">Sign-in/Sign-out</button>
+          <Link to="signin" className="Login">
+            Sign-in/Sign-out
+          </Link>
         </nav>
       </div>
     );
