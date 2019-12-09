@@ -1,0 +1,79 @@
+.AccountTitle {
+  text-align: center;
+  margin-top: 50px;
+}
+.Instructions {
+  text-align: center;
+}
+.NewUserSetup {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+}
+.FirstName {
+  margin: 10px 50px;
+  height: 25px;
+  text-align: center;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: thin;
+}
+.LastName {
+  margin: 10px 50px;
+  height: 25px;
+  text-align: center;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: thin;
+}
+
+.Email {
+  margin: 10px 50px;
+  height: 25px;
+  text-align: center;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: thin;
+}
+.password {
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+}
+.userpassword {
+  border-radius: 5px;
+  height: 25px;
+  width: 60%;
+  margin-right: 0;
+  border-style: solid;
+  border-width: thin;
+  text-align: center;
+  flex-grow: 1;
+}
+.ShowPassword {
+  flex-grow: 2;
+  margin: 0;
+}
+.NewUser {
+  height: 25px;
+  border-radius: 5px;
+  background-color: white;
+  margin: 10px 50px;
+}
+.NewUser:hover {
+  background-color: orange;
+}
+p {
+  font-size: 10px;
+  text-align: center;
+}
+
+/* @media screen and (min-width: 400px) {
+  .userpassword {
+    width: 180px;
+    margin: 0;
+  }
+  .ShowPassword {
+    margin-left: 6px;
+  }
+} */

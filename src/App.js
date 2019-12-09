@@ -1,5 +1,6 @@
 import React from "react";
-import LandingPage from "./Components/LandingPage";
+// import LandingPage from "./Components/LandingPage";
+import CreateAccount from "./Components/New Account/CreateAccount";
 import "./App.css";
 
 export default class App extends React.Component {
@@ -9,7 +10,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div className="LandingLayout">
-        <LandingPage />
+        <CreateAccount />
+        {/* <LandingPage /> */}
         <footer className="Legal">
           Copyright 2019 All Rights Reserved Terrance Chang ©
         </footer>
