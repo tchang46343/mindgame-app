@@ -10,16 +10,15 @@ class NewAccount extends React.Component {
   render() {
     return (
       <div>
-        <header className="Sign-In"> Create A New Account</header>
+        <header className="Sign-In"> Secure Login </header>
 
         <form className="NewUserSetup">
           <input
-            className="FirstName"
+            className="UserEmail"
             required
-            placeholder="First Name"
+            placeholder="meditate@mind.com"
           ></input>
-          <input className="LastName" required placeholder="LastName"></input>
-          <input className="Email" required placeholder="Email Address"></input>
+
           <div className="password">
             <input
               type={this.state.hidden ? "password" : "text"}
@@ -32,13 +31,8 @@ class NewAccount extends React.Component {
             </button>
           </div>
 
-          <p className="TermsConditions">
-            By clicking Sign Up, you agree to our Terms, Data Policy and Cookies
-            Policy.
-          </p>
-
-          <button className="NewUser" onClick={this.handleClick}>
-            Sign Up
+          <button className="Logon" onClick={this.handleClick}>
+            Log In
           </button>
         </form>
       </div>

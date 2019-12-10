@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Route, Switch } from "react-router-dom";
 import LandingPage from "./Components/LandingPage";
 import CreateAccount from "./Components/New Account/CreateAccount";

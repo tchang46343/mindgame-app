@@ -12,7 +12,7 @@ export default class NavBar extends React.Component {
           </Link>
           {/* <img src=""></img> */}
           <Link to="signin" className="Login">
-            Sign-in/Sign-out
+            Sign In
           </Link>
         </nav>
       </div>

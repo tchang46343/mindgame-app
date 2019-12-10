@@ -14,6 +14,7 @@
   color: white;
   background-color: #05386b;
   box-shadow: 2px 5px 9px #379683;
+  text-decoration: none;
 }
 .NewAccount {
   border-radius: 5px;
