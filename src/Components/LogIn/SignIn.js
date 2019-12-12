@@ -10,28 +10,25 @@ class NewAccount extends React.Component {
   render() {
     return (
       <div>
-        <header className="Sign-In"> Secure Login </header>
+        <header className="Sign-In"> Account Login </header>
 
         <form className="NewUserSetup">
+          <header className="EmailTag"> Email Address</header>
           <input
             className="UserEmail"
             required
             placeholder="meditate@mind.com"
           ></input>
+          <header className="PasswordTag"> Password</header>
+          <input
+            type={this.state.hidden ? "password" : "text"}
+            placeholder="Password"
+            required
+            className="PasswordEntry"
+            type="Password"
+          />
 
-          <div className="password">
-            <input
-              type={this.state.hidden ? "password" : "text"}
-              placeholder="Password"
-              required
-              className="userpassword"
-            />
-            <button className="ShowPassword" onClick={this.toggleShow}>
-              Show / Hide
-            </button>
-          </div>
-
-          <button className="Logon" onClick={this.handleClick}>
+          <button className="VerifyAccount" onClick={this.handleClick}>
             Log In
           </button>
         </form>

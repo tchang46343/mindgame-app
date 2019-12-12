@@ -98,7 +98,7 @@
     bottom: 0px;
   }
 }
-button:hover {
+.StartGame:hover {
   background-color: #8ee4af;
 }
 

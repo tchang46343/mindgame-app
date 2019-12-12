@@ -1,0 +1,71 @@
+.Sign-In {
+  text-align: center;
+  margin-top: 80px;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.NewUserSetup {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.EmailTag {
+  font-size: 18px;
+}
+.PasswordTag {
+  font-size: 18px;
+}
+
+.UserEmail {
+  border-radius: 5px;
+  height: 25px;
+  margin: 15px 25px;
+  border-style: solid;
+  border-width: thin;
+  text-align: center;
+  font-size: 16px;
+}
+
+.PasswordEntry {
+  border-radius: 5px;
+  height: 25px;
+  margin: 15px 25px;
+  border-style: solid;
+  border-width: thin;
+  text-align: center;
+  font-size: 16px;
+}
+
+.VerifyAccount {
+  border-radius: 5px;
+  height: 25px;
+  margin: 15px 25px;
+  border-style: solid;
+  border-width: thin;
+  text-align: center;
+  font-size: 16px;
+  border-style: solid;
+  border-width: thin;
+  box-shadow: 20px 20px 10px grey;
+}
+.VerifyAccount:hover {
+  background-color: gold;
+}
+@media screen and (min-width: 700px) {
+  .UserEmail {
+    margin: 25px 30%;
+  }
+  .PasswordEntry {
+    margin: 25px 30%;
+  }
+
+  .VerifyAccount {
+    height: 50px;
+    margin: 25px 25%;
+    font-size: 26px;
+    font-weight: bold;
+    box-shadow: 20px 20px 10px grey;
+  }
+}

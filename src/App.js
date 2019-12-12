@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import LandingPage from "./Components/LandingPage";
 import CreateAccount from "./Components/New Account/CreateAccount";
 import Signin from "./Components/LogIn/SignIn";
+import MainScreen from "./Components/GameSlides/PrimaryPage";
 import "./App.css";
 
 export default class App extends React.Component {
@@ -16,6 +17,7 @@ export default class App extends React.Component {
           <Route exact path="/" component={LandingPage} />
           <Route path="/newaccount" component={CreateAccount} />
           <Route path="/signin" component={Signin} />
+          <Route path="/newslide" component={MainScreen} />
         </Switch>
         <footer className="Legal">
           Copyright 2019 All Rights Reserved Terrance Chang ©
