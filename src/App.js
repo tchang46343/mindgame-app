@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import LandingPage from "./Components/LandingPage";
 import CreateAccount from "./Components/New Account/CreateAccount";
 import Signin from "./Components/LogIn/SignIn";
-import MainScreen from "./Components/GameSlides/PrimaryPage";
+import MainScreen from "./Components/GameComponent/PrimaryPage";
 import "./App.css";
 
 export default class App extends React.Component {

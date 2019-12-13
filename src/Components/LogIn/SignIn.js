@@ -21,7 +21,6 @@ class NewAccount extends React.Component {
           ></input>
           <header className="PasswordTag"> Password</header>
           <input
-            type={this.state.hidden ? "password" : "text"}
             placeholder="Password"
             required
             className="PasswordEntry"
