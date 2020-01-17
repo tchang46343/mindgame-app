@@ -1,0 +1,15 @@
+.GameOverContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20%;
+}
+
+.GameOver {
+  text-align: center;
+  font-size: 32px;
+}
+
+.OutReach {
+  text-align: center;
+  font-size: 16px;
+}

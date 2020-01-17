@@ -12,16 +12,24 @@
   justify-content: center;
 }
 .EmailTag {
-  font-size: 18px;
+  font-size: 32px;
+  font-weight: 400;
 }
 .PasswordTag {
-  font-size: 18px;
+  font-size: 32px;
+  font-weight: 400;
 }
 
-.UserEmail {
+.email {
+  display: block;
+  box-sizing: border-box;
+  width: 300px;
+  height: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border-radius: 5px;
-  height: 25px;
-  margin: 15px 25px;
   border-style: solid;
   border-width: thin;
   text-align: center;
@@ -29,9 +37,15 @@
 }
 
 .PasswordEntry {
+  display: block;
+  box-sizing: border-box;
+  width: 300px;
+  height: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border-radius: 5px;
-  height: 25px;
-  margin: 15px 25px;
   border-style: solid;
   border-width: thin;
   text-align: center;
@@ -40,8 +54,14 @@
 
 .VerifyAccount {
   border-radius: 5px;
-  height: 25px;
-  margin: 15px 25px;
+  display: block;
+  box-sizing: border-box;
+  width: 300px;
+  height: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border-style: solid;
   border-width: thin;
   text-align: center;
@@ -53,17 +73,16 @@
 .VerifyAccount:hover {
   background-color: gold;
 }
-@media screen and (min-width: 700px) {
-  .UserEmail {
-    margin: 25px 30%;
+@media screen and (min-width: 600px) {
+  .email {
+    margin: auto;
   }
   .PasswordEntry {
-    margin: 25px 30%;
+    margin: auto;
   }
 
   .VerifyAccount {
     height: 50px;
-    margin: 25px 25%;
     font-size: 26px;
     font-weight: bold;
     box-shadow: 20px 20px 10px grey;

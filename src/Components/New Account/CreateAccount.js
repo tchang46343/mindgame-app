@@ -5,11 +5,37 @@ class NewAccount extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hidden: true
+      hidden: true,
+      firstName: "",
+      lastName: "",
+      email: "",
+      password: ""
     };
     this.toggleShow = this.toggleShow.bind(this);
   }
+  setFirstName(firstName) {
+    this.setState({
+      firstName
+    });
+  }
 
+  setlastName(lastName) {
+    this.setState({
+      lastName
+    });
+  }
+
+  setEmail(email) {
+    this.setState({
+      email
+    });
+  }
+
+  setPassword(password) {
+    this.setState({
+      password
+    });
+  }
   toggleShow(e) {
     e.preventDefault();
     this.setState({ hidden: !this.state.hidden });
@@ -22,37 +48,57 @@ class NewAccount extends React.Component {
   render() {
     return (
       <div>
-        <header className="AccountTitle"> Create A New Account</header>
-        <p className="Instructions">
+        <header className="accountTitle"> Create A New Account</header>
+        <p className="instructions">
           Please fill in the following field below:
         </p>
 
-        <form className="NewUserSetup">
+        <form className="newUserSetup">
           <input
-            className="FirstName"
+            className="firstName"
             required
             placeholder="First Name"
-          ></input>
-          <input className="LastName" required placeholder="LastName"></input>
-          <input className="Email" required placeholder="Email Address"></input>
+            type="text"
+            value={this.state.firstName}
+            onChange={e => this.setFirstName(e.target.value)}
+          />
+          <input
+            className="lastName"
+            required
+            placeholder="LastName"
+            type="text"
+            value={this.state.lastName}
+            onChange={e => this.setLastName(e.target.value)}
+          />
+          <input
+            className="email"
+            required
+            placeholder="Email Address"
+            type="text"
+            value={this.state.email}
+            onChange={e => this.setEmail(e.target.value)}
+          />
+
           <div className="password">
             <input
               type={this.state.hidden ? "password" : "text"}
               placeholder="Password"
               required
-              className="userpassword"
+              className="userPassword"
+              value={this.state.password}
+              onChange={e => this.setPassword(e.target.value)}
             />
-            <button className="ShowPassword" onClick={this.toggleShow}>
+            <button className="showPassword" onClick={this.toggleShow}>
               Show / Hide
             </button>
           </div>
 
-          <p className="TermsConditions">
+          <p className="termsConditions">
             By clicking Sign Up, you agree to our Terms, Data Policy and Cookies
             Policy.
           </p>
 
-          <button className="NewUser" onClick={this.handleClick}>
+          <button className="newUser" onClick={this.handleClick}>
             Sign Up
           </button>
         </form>

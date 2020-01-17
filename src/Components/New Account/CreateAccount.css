@@ -1,25 +1,33 @@
-.AccountTitle {
+.accountTitle {
   text-align: center;
   margin-top: 50px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 32px;
 }
-.Instructions {
+.instructions {
   text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 18px;
 }
-.NewUserSetup {
+.newUserSetup {
   display: flex;
   flex-direction: column;
   border-radius: 5px;
-  margin: 30px 0;
+  margin: 20px 0;
+  box-shadow: 10px 10px 25px 15px grey;
 }
-.FirstName {
+.firstName {
   margin: 10px 50px;
   height: 25px;
   text-align: center;
   border-radius: 5px;
   border-style: solid;
   border-width: thin;
+  color: black;
 }
-.LastName {
+.lastName {
   margin: 10px 50px;
   height: 25px;
   text-align: center;
@@ -28,7 +36,7 @@
   border-width: thin;
 }
 
-.Email {
+.email {
   margin: 10px 50px;
   height: 25px;
   text-align: center;
@@ -41,7 +49,7 @@
   flex-direction: row;
   margin-left: 50px;
 }
-.userpassword {
+.userPassword {
   border-radius: 5px;
   height: 25px;
   width: 60%;
@@ -51,33 +59,134 @@
   text-align: center;
   flex-grow: 1;
 }
-.ShowPassword {
+.showPassword {
   flex-grow: 2;
   margin: 0 50px;
   padding: 0;
   border: 0;
   border-radius: 5px;
 }
-.NewUser {
+.newUser {
   height: 25px;
   border-radius: 5px;
   background-color: white;
   margin: 10px 50px;
 }
-.NewUser:hover {
+.newUser:hover {
   background-color: orange;
 }
-p {
+.termsConditions {
   font-size: 10px;
   text-align: center;
+  margin: auto;
 }
 
-/* @media screen and (min-width: 400px) {
-  .userpassword {
-    width: 180px;
-    margin: 0;
+@media screen and (min-width: 600px) {
+  .instructions {
+    margin-bottom: 50px;
   }
-  .ShowPassword {
-    margin-left: 6px;
+  .newUserSetup {
+    margin: auto;
+    padding: 15px;
+    width: 500px;
+    height: 400px;
+    box-shadow: 10px 10px 25px 15px grey;
+    background-color: white;
   }
-} */
+  .firstName {
+    display: block;
+    box-sizing: border-box;
+    width: 350px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .lastName {
+    display: block;
+    box-sizing: border-box;
+    width: 350px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .email {
+    display: block;
+    box-sizing: border-box;
+    width: 350px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .password {
+    display: flex;
+    flex-direction: row;
+  }
+  .userPassword {
+    box-sizing: border-box;
+    width: 280px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .showPassword {
+    margin-left: 10px;
+    padding: 0 15px;
+  }
+  .newUser {
+    box-sizing: border-box;
+    width: 350px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .newUserSetup {
+    margin-left: auto;
+    padding: 15px;
+    width: 500px;
+    height: 400px;
+    box-shadow: 10px 10px 25px 15px grey;
+    background-color: white;
+  }
+  .firstName {
+    display: block;
+    box-sizing: border-box;
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .lastName {
+    display: block;
+    box-sizing: border-box;
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .email {
+    display: block;
+    box-sizing: border-box;
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .password {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+  .userPassword {
+    box-sizing: border-box;
+    width: 280px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .showPassword {
+    margin-left: 10px;
+    padding: 0 15px;
+  }
+  .newUser {
+    box-sizing: border-box;
+    width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

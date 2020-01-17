@@ -1,5 +1,5 @@
 import React from "react";
-//import Counter from "./Counter";
+import { Link } from "react-router-dom";
 import DisplaySlide from "./DisplaySlide";
 import "./PrimaryPage.css";
 
@@ -18,12 +18,20 @@ class MainScreen extends React.Component {
   render() {
     return (
       <div>
-        <p className="CurrentCount">
-          {" "}
-          You are currently on Mediation Card: {this.state.count}
-        </p>
+        <header className="gameInfo">
+          <p className="currentCount">
+            {" "}
+            You are currently on Mediation Card: {this.state.count}
+          </p>
+          <button className="moveOn" onClick={this.increment}>
+            <Link className="nextSlide" to="/results">
+              {" "}
+              Next Slide
+            </Link>
+          </button>
+        </header>
+
         <DisplaySlide />
-        {/* <button onClick={this.increment}> Next Slide</button> */}
       </div>
     );
   }

@@ -1,9 +1,8 @@
 footer {
-  position: relative;
-  left: 0;
+  position: absolute;
   bottom: 0;
   width: 100%;
-  margin: 15px 0;
+  padding-bottom: 45px;
   text-align: center;
   font-size: 16px;
   animation-name: copyright;
@@ -17,16 +16,5 @@ footer {
   }
   100% {
     bottom: -30px;
-  }
-}
-
-@media screen and (min-width: 380px) {
-  footer {
-    margin: 100px 0;
-  }
-}
-@media screen and (min-width: 780px) {
-  footer {
-    margin: 300px 0;
   }
 }

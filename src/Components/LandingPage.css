@@ -29,7 +29,7 @@
 }
 
 .InstructionInfo {
-  margin: 0;
+  margin-bottom: 20px;
   text-align: center;
   font-size: 12px;
   color: #05386b;
@@ -72,9 +72,10 @@
   }
 }
 .StartGame {
-  margin: 30px 75px;
-  padding: 0;
-  height: 50px;
+  max-width: 200px;
+  height: auto;
+  margin: auto;
+  padding: 10px;
   border: solid 1px black;
   cursor: pointer;
   box-shadow: 5px 10px 18px #888888;
@@ -88,6 +89,11 @@
   animation: playButton;
   animation-duration: 3s;
   animation-fill-mode: forwards;
+}
+
+.gameJump {
+  color: white;
+  text-decoration: none;
 }
 
 @keyframes playButton {
@@ -111,6 +117,9 @@
   }
 
   .StartGame {
-    margin: 10px 75px;
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    padding: 10px;
   }
 }

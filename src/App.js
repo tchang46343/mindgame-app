@@ -4,6 +4,7 @@ import LandingPage from "./Components/LandingPage";
 import CreateAccount from "./Components/New Account/CreateAccount";
 import Signin from "./Components/LogIn/SignIn";
 import MainScreen from "./Components/GameComponent/PrimaryPage";
+import ResultsPage from "./Components/EndGame/ResultsPage";
 import "./App.css";
 
 export default class App extends React.Component {
@@ -18,10 +19,8 @@ export default class App extends React.Component {
           <Route path="/newaccount" component={CreateAccount} />
           <Route path="/signin" component={Signin} />
           <Route path="/newslide" component={MainScreen} />
+          <Route path="/results" component={ResultsPage} />
         </Switch>
-        <footer className="Legal">
-          Copyright 2019 All Rights Reserved Terrance Chang ©
-        </footer>
       </div>
     );
   }

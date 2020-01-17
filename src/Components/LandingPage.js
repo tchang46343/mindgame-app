@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./LandingPage.css";
 import NavBar from "./NavBar";
+import NextSlide from "./GameComponent/PrimaryPage";
 
 export default class HomePage extends React.Component {
   onSubmit(event) {
@@ -26,8 +28,15 @@ export default class HomePage extends React.Component {
             inspiring phrase, and self-reflection.
           </p>
 
-          <button className="StartGame">Begin Game!</button>
+          <button className="StartGame" onClick={NextSlide}>
+            <Link className="gameJump" to="/newslide">
+              Begin Game!
+            </Link>
+          </button>
         </form>
+        <footer className="Legal">
+          Copyright 2019 All Rights Reserved Terrance Chang ©
+        </footer>
       </div>
     );
   }
