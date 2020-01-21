@@ -8,7 +8,7 @@
 }
 .Instruction {
   text-align: center;
-  margin: 0;
+  padding-top: 20px;
   font-size: 16px;
   color: #05386b;
   font-weight: bold;
@@ -29,7 +29,8 @@
 }
 
 .InstructionInfo {
-  margin-bottom: 20px;
+  margin: 20px 50px;
+  padding: 10px;
   text-align: center;
   font-size: 12px;
   color: #05386b;
@@ -113,7 +114,8 @@
     margin: 0px;
   }
   .InstructionInfo {
-    margin: 20px 0px;
+    margin: 20px 100px;
+    font-size: 18px;
   }
 
   .StartGame {
