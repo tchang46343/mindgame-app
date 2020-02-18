@@ -1,68 +1,49 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# **_Motivate The Mind_**
 
-## Available Scripts
+**Check-Out the website at:**
+[Motivate The Mind](https://tchang46343-coeus-app.now.sh/).
 
-In the project directory, you can run:
+For access to the API repo of Coeus System Inc. click on [Motivate The Mind](https://github.com/tchang46343/mindgame-app.git).
 
-### `npm start`
+## Motivate The Mind Summary:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Take a break, relax, and enjoy the game. Motivate the Mind is a mental health game website. A user will be shown a series of slides in which the game is designed to alleviate stress and promote positivity. As mental health is often overlooked, individuals should take more care of their mental health state. Having a clearer mental health state provides many benefits such as better memory retention, reduce anxiety, lower blood pressure, and increase energy. By playing Motivate the Mind, users should feel refreshed and empower after one round of slides. So remember, taking care of your mental health, and don't let it be the last thing on your mind.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+# **Application Screenshots**
 
-### `npm test`
+## Home Page:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img src="imageRef/Welcome%20Page.png" width="700" height="400" alt="HomePage">
 
-### `npm run build`
+- The image above is the landing page for Motivate The Mind.
+- To get started read the instructions on how to play the game and Click "Begin Game" when you are ready.
+- On the first page of the game you will see four boxes. View all four boxes and interpret the message that ressonance with you. Next click on the "Next" button until you are taken to the end of the game.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Inventory Manipulations Options:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<img src="imageRef/Coeus%20Manipulations.png" width="700" height="400" alt="Inventory Manipulations">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- The image above is the data manipulation landing page for customers. Customers are allowed to view, add, delete, and update stored inventory item data.
 
-### `npm run eject`
+## Data Manipulations:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- ### Display Inventory Data:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="imageRef/RetrieveItemsv2.png" width="700" height="400" alt="Retrieve Data">
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- This screen shot demonstrates the ability for the application to retrieve customer data information about specific parts and vendors information.
+- As seen in the example customers can access specific data points in relations to their vendor.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- ### Add Inventory Items:
 
-## Learn More
+<img src="imageRef/postdata.png" width="700" height="400" alt="Retrieve Data">
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- This screen shot demonstrates the ability for the customer to post new inventory items to the database.
+- As seen in the example data was entered into the required fields and then the server sent a fetch request to POST the data.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Technology Languages Used:
 
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- HTML5
+- CSS3
+- Javascript
+- React

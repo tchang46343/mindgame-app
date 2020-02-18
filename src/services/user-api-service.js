@@ -4,7 +4,7 @@ import config from "../config";
 const UserApiService = {
   getUsers() {
     return fetch(`${config.API_ENDPOINT}/users`, {
-      header: {
+      headers: {
         authorization: `basic ${TokenService.getUsers()}`
       }
     }).then(res =>
@@ -12,9 +12,9 @@ const UserApiService = {
     );
   },
 
-  getUsers(userId) {
+  getUsersId(userId) {
     return fetch(`${config.API_ENDPOINT}/users/${userId}`, {
-      header: {
+      headers: {
         authorization: `basic ${TokenService.getUsers()}`
       }
     }).then(res =>
@@ -25,7 +25,7 @@ const UserApiService = {
   postUser(userId, text) {
     return fetch(`${config.API_ENDPOINT}/users`, {
       method: "POST",
-      header: {
+      headers: {
         "content-type": "application/json",
         authorization: `basic ${TokenService.getUsers()}`
       },

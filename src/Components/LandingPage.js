@@ -5,10 +5,6 @@ import NavBar from "./NavBar";
 import NextSlide from "./GameComponent/PrimaryPage";
 
 export default class HomePage extends React.Component {
-  onSubmit(event) {
-    event.preventDefault();
-    console.log("test");
-  }
   render() {
     return (
       <div>
@@ -29,7 +25,7 @@ export default class HomePage extends React.Component {
             your feedback!
           </p>
 
-          <button className="StartGame" onClick={NextSlide}>
+          <button className="StartGame">
             <Link className="gameJump" to="/newslide">
               Begin Game!
             </Link>

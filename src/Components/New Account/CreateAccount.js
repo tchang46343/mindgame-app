@@ -1,27 +1,27 @@
 import React from "react";
 import "./CreateAccount.css";
+import UserApiService from "../../services/user-api-service";
 
 class NewAccount extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hidden: true,
-      firstName: "",
-      lastName: "",
+      firstname: "",
+      lastname: "",
       email: "",
       password: ""
     };
     this.toggleShow = this.toggleShow.bind(this);
   }
-  setFirstName(firstName) {
+  setFirstName(firstname) {
     this.setState({
-      firstName
+      firstname
     });
   }
 
-  setlastName(lastName) {
+  setlastName(lastname) {
     this.setState({
-      lastName
+      lastname
     });
   }
 
@@ -40,10 +40,15 @@ class NewAccount extends React.Component {
     e.preventDefault();
     this.setState({ hidden: !this.state.hidden });
   }
-  handleClick(e) {
-    e.preventDefault();
-    alert("Account created please Sign-In.");
-  }
+  // handleClick(e) {
+  //   e.preventDefault();
+  //   UserApiService.postUser({
+  //     firstname: firstname.value,
+  //     lastname: lastname.value,
+  //     email: email.value,
+  //     password: password.value
+  //   });
+  // }
 
   render() {
     return (
@@ -59,7 +64,7 @@ class NewAccount extends React.Component {
             required
             placeholder="First Name"
             type="text"
-            value={this.state.firstName}
+            value={this.state.firstname}
             onChange={e => this.setFirstName(e.target.value)}
           />
           <input
@@ -67,7 +72,7 @@ class NewAccount extends React.Component {
             required
             placeholder="LastName"
             type="text"
-            value={this.state.lastName}
+            value={this.state.lastname}
             onChange={e => this.setLastName(e.target.value)}
           />
           <input
