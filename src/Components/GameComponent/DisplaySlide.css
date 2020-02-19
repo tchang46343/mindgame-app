@@ -29,6 +29,7 @@
 .words {
   font-size: 12px;
   font-weight: bold;
+  text-align: center;
 }
 .FunnyImage {
   width: 100%;

@@ -54,11 +54,11 @@ class NewAccount extends React.Component {
     return (
       <div>
         <header className="accountTitle"> Create A New Account</header>
-        <p className="instructions">
-          Please fill in the following field below:
-        </p>
 
         <form className="newUserSetup">
+          <p className="instructions">
+            Please fill in the following field below:
+          </p>
           <input
             className="firstName"
             required
@@ -76,7 +76,7 @@ class NewAccount extends React.Component {
             onChange={e => this.setLastName(e.target.value)}
           />
           <input
-            className="email"
+            className="emailAddress"
             required
             placeholder="Email Address"
             type="text"

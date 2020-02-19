@@ -1,3 +1,19 @@
-.timerControls {
-  text-align: center;
+.buttonLocation {
+  position: absolute;
+  right: 125px;
+  bottom: 250px;
+}
+
+.buttonResume {
+  position: absolute;
+  right: 350px;
+  top: 300px;
+  margin: none;
+}
+
+.buttonReset {
+  position: absolute;
+  right: 300px;
+  top: 300px;
+  margin: none;
 }

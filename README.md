@@ -19,22 +19,19 @@ Take a break, relax, and enjoy the game. Motivate the Mind is a mental health ga
 - To get started read the instructions on how to play the game and Click "Begin Game" when you are ready.
 - On the first page of the game you will see four boxes. View all four boxes and interpret the message that ressonance with you. Next click on the "Next" button until you are taken to the end of the game.
 
-## Inventory Manipulations Options:
+## Game Card:
 
-<img src="imageRef/Coeus%20Manipulations.png" width="700" height="400" alt="Inventory Manipulations">
+<img src="imageRef/gameSlide.png" width="700" height="400" alt="Game Slide">
 
-- The image above is the data manipulation landing page for customers. Customers are allowed to view, add, delete, and update stored inventory item data.
+- The card above is displayed in four quadrants. The idea of the four quadrants allows the user eyes to focus on any particular area. The idea is to examine each quadrant and let your mind taking into the meaning of each section. Some images maybe be funny and relaxing, or some quote may give a sense of empowerment, and even the timer exercise serves the purpose of lowering your heart and allows the user to settle down.
 
-## Data Manipulations:
+## Create Account:
 
-- ### Display Inventory Data:
+<img src="imageRef/Signup.png" width="700" height="400" alt="Create Account">
 
-<img src="imageRef/RetrieveItemsv2.png" width="700" height="400" alt="Retrieve Data">
+- This screen shot demonstrates the ability to create a profile. Users can create a profile and interact with other users once profile has been created
 
-- This screen shot demonstrates the ability for the application to retrieve customer data information about specific parts and vendors information.
-- As seen in the example customers can access specific data points in relations to their vendor.
-
-- ### Add Inventory Items:
+* ### Add Inventory Items:
 
 <img src="imageRef/postdata.png" width="700" height="400" alt="Retrieve Data">
 
