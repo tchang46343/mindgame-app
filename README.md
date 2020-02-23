@@ -13,7 +13,7 @@ Take a break, relax, and enjoy the game. Motivate the Mind is a mental health ga
 
 ## Home Page:
 
-<img src="imageRef/Welcome%20Page.png" width="700" height="400" alt="HomePage">
+<img src="imageRef/Welcome%20Page.png" width="500" height="400" alt="HomePage">
 
 - The image above is the landing page for Motivate The Mind.
 - To get started read the instructions on how to play the game and Click "Begin Game" when you are ready.
