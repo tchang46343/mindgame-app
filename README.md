@@ -21,22 +21,22 @@ Take a break, relax, and enjoy the game. Motivate the Mind is a mental health ga
 
 ## Game Card:
 
-<img src="imageRef/gameSlide.png" width="700" height="400" alt="Game Slide">
+<img src="imageRef/gameSlide.png" width="500" height="400" alt="Game Slide">
 
 - The card above is displayed in four quadrants. The idea of the four quadrants allows the user eyes to focus on any particular area. The idea is to examine each quadrant and let your mind taking into the meaning of each section. Some images maybe be funny and relaxing, or some quote may give a sense of empowerment, and even the timer exercise serves the purpose of lowering your heart and allows the user to settle down.
 
 ## Create Account:
 
-<img src="imageRef/Signup.png" width="700" height="400" alt="Create Account">
+<img src="imageRef/Signup.png" width="500" height="400" alt="Create Account">
 
 - This screen shot demonstrates the ability to create a profile. Users can create a profile and interact with other users once profile has been created
 
-* ### Add Inventory Items:
+## Login:
 
-<img src="imageRef/postdata.png" width="700" height="400" alt="Retrieve Data">
+<img src="imageRef/userLogin.png" width="500" height="400" alt="User Login">
 
-- This screen shot demonstrates the ability for the customer to post new inventory items to the database.
-- As seen in the example data was entered into the required fields and then the server sent a fetch request to POST the data.
+- This screen shot demonstrates the ability for users to login, once their profile has been created.
+- Users are encouraged to create an account and log in to their account every time they play the game. To enhance the game objective goal, collecting data on users is imperative. We want to ensure that users find the game relaxing to play and add more content in the future.
 
 ## Technology Languages Used:
 
