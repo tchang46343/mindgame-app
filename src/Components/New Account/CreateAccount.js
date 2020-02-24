@@ -1,6 +1,6 @@
 import React from "react";
 import "./CreateAccount.css";
-import UserApiService from "../../services/user-api-service";
+import { API_BASE_URL } from "../../config";
 
 class NewAccount extends React.Component {
   constructor(props) {
@@ -9,7 +9,8 @@ class NewAccount extends React.Component {
       firstname: "",
       lastname: "",
       email: "",
-      password: ""
+      password: "",
+      hidden: true
     };
     this.toggleShow = this.toggleShow.bind(this);
   }
@@ -19,7 +20,7 @@ class NewAccount extends React.Component {
     });
   }
 
-  setlastName(lastname) {
+  setLastName(lastname) {
     this.setState({
       lastname
     });
@@ -40,15 +41,45 @@ class NewAccount extends React.Component {
     e.preventDefault();
     this.setState({ hidden: !this.state.hidden });
   }
-  // handleClick(e) {
-  //   e.preventDefault();
-  //   UserApiService.postUser({
-  //     firstname: firstname.value,
-  //     lastname: lastname.value,
-  //     email: email.value,
-  //     password: password.value
-  //   });
-  // }
+  handleClick = e => {
+    e.preventDefault();
+    const { firstname, lastname, email, password } = this.state;
+    const newUser = { firstname, lastname, email, password };
+    console.log(JSON.stringify(newUser));
+
+    const options = {
+      method: "POST",
+      body: JSON.stringify(newUser),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    };
+
+    fetch(`${API_BASE_URL}users`, options)
+      .then(res => {
+        if (!res.ok) {
+          throw new Error(
+            "Something went wrong please try to submit you request again."
+          );
+        }
+        return res.send(
+          `Success!!! Welcome ${firstname} you are now a memeber of Motivate the Mind`
+        );
+      })
+      .then(data => {
+        this.setState({
+          firstname: " ",
+          lastname: " ",
+          email: " ",
+          password: " "
+        });
+      })
+      .catch(err => {
+        this.setState({
+          error: err.message
+        });
+      });
+  };
 
   render() {
     return (
