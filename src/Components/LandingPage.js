@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./LandingPage.css";
 import NavBar from "./NavBar";
-import NextSlide from "./GameComponent/PrimaryPage";
 
 export default class HomePage extends React.Component {
   render() {

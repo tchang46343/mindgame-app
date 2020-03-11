@@ -2,10 +2,10 @@ import TokenService from "../services/token-services";
 import config from "../config";
 
 const UserApiService = {
-  getUsers() {
-    return fetch(`${config.API_ENDPOINT}/users`, {
+  getUsers(userId) {
+    return fetch(`${config.API_ENDPOINT}/users/${userId}`, {
       headers: {
-        authorization: `basic ${TokenService.getUsers()}`
+        authorization: `basic ${TokenService.getAuthToken()}`
       }
     }).then(res =>
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
@@ -15,7 +15,7 @@ const UserApiService = {
   getUsersId(userId) {
     return fetch(`${config.API_ENDPOINT}/users/${userId}`, {
       headers: {
-        authorization: `basic ${TokenService.getUsers()}`
+        authorization: `basic ${TokenService.getAuthToken()}`
       }
     }).then(res =>
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
@@ -23,11 +23,11 @@ const UserApiService = {
   },
 
   postUser(userId, text) {
-    return fetch(`${config.API_ENDPOINT}/users`, {
+    return fetch(`${config.API_ENDPOINT}/users/${userId}`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        authorization: `basic ${TokenService.getUsers()}`
+        authorization: `basic ${TokenService.getAuthToken()}`
       },
       body: JSON.stringify({
         user_id: userId,

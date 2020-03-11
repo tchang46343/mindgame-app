@@ -1,7 +1,7 @@
 # **_Motivate The Mind_**
 
 **Check-Out the website at:**
-[Motivate The Mind](https://tchang46343-coeus-app.now.sh/).
+[Motivate The Mind](https://mindgame-app.now.sh/).
 
 For access to the API repo of Coeus System Inc. click on [Motivate The Mind](https://github.com/tchang46343/mindgame-app.git).
 

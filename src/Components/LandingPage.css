@@ -8,7 +8,6 @@
 }
 .Instruction {
   text-align: center;
-  padding-top: 20px;
   font-size: 16px;
   color: #05386b;
   font-weight: bold;
@@ -29,7 +28,7 @@
 }
 
 .InstructionInfo {
-  margin: 20px 50px;
+  margin: 0 50px;
   padding: 10px;
   text-align: center;
   font-size: 12px;

@@ -21,6 +21,14 @@ class MainScreen extends React.Component {
     });
   };
 
+  // showNewContent = e => {
+  //   e.eventpreventDefault();
+
+  //   const { word, quote, imageurl } = this.state;
+  //   1.utilize context to target attribute values to update
+  //   2.Create logic so that next button re-render the display slide to target paragraph attributes
+  // };
+
   render() {
     return (
       <div>

@@ -1,5 +1,6 @@
 import React from "react";
 import TokenService from "../../services/token-services";
+import AuthApiService from "../../services/user-api-service";
 import "./SignIn.css";
 //import context from "../../context";
 
@@ -10,6 +11,7 @@ class NewAccount extends React.Component {
     this.state = {
       email: "",
       Password: ""
+      // this.props.onLoginSucess()
     };
   }
 
@@ -27,28 +29,30 @@ class NewAccount extends React.Component {
 
   handleSubmitBasicAuth = e => {
     e.preventDefault();
+    this.setState({ error: null });
     const { email, Password } = e.target;
-    TokenService.saveAuthToken(
-      TokenService.makeBasicAuthToken(email.value, Password.value)
-    );
+    AuthApiService.postUser({
+      email: email.value,
+      Password: Password.value
+    })
+      .then(res => {
+        email.value = "";
+        Password.value = "";
+        TokenService.saveAuthToken(res.saveAuthToken);
+        this.props.onLoginSucess();
+      })
+      .catch(res => {
+        this.setState({ error: res.error });
+      });
     //articleservices
   };
 
-  handleSubmit = e => {
-    e.preventDefault();
-    this.context.handleSubmit(this.state.email, this.state.Password);
-  };
-
   render() {
-    //const { email, Password } = this.state;
-
-    // console.log(email);
-    // console.log(Password);
     return (
       <div>
         <header className="Sign-In"> Account Login </header>
 
-        <form className="NewUserSetup" onSubmit={this.handleSubmit}>
+        <form className="NewUserSetup" onSubmit={this.handleSubmitBasicAuth}>
           <header className="EmailTag"> User Email:</header>
           <input
             className="email"
