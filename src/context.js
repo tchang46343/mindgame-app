@@ -24,7 +24,8 @@ class ApplicationContextProvider extends Component {
           gameslides: results
         });
         console.log(results);
-      });
+      })
+      .catch(err => console.log(err));
   }
 
   updateFilter = (word, quote, imageurl) => {
@@ -34,12 +35,13 @@ class ApplicationContextProvider extends Component {
   };
 
   render() {
-    const { word, quote, imageurl, filter } = this.state;
+    const { word, quote, imageurl, filter, gameslides } = this.state;
     const value = {
       word,
       quote,
       imageurl,
       filter,
+      gameslides,
       updateFilter: this.updateFilter
     };
     return (

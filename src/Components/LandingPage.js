@@ -25,7 +25,7 @@ export default class HomePage extends React.Component {
           </p>
 
           <button className="StartGame">
-            <Link className="gameJump" to="/newslide">
+            <Link className="gameJump" to="/slide/1">
               Begin Game!
             </Link>
           </button>

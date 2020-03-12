@@ -20,39 +20,41 @@ class DisplayContent extends React.Component {
   };
 
   render() {
+    const slide = this.props.slide
+      ? this.props.slide
+      : {
+          word: "",
+          phrase: "",
+          img: ""
+        };
+
     return (
       <div>
         <main className="HeadSpace">
           <div className="container">
             <header className="title">Contemplate the Word:</header>
-            <p className="words" value={this.state.word}>
-              {" "}
-              Introspection:{this.state.word}
-            </p>
+            <p className="words"> Introspection:{slide.word}</p>
           </div>
 
           <div className="container">
             <header className="title">Phrase To Live By:</header>
-            <p className="words" value={this.state.phrase}>
-              {" "}
-              Quote:{this.state.phrase}
-            </p>
+            <p className="words"> Quote:{slide.quote}</p>
           </div>
 
           <div className="containerImage">
             <header className="title">Picture Decompression:</header>
+
             <img
               className="FunnyImage"
-              src="https://zenstatic.blob.core.windows.net/blog/p1cb8ot5dgi0i1jcl4011fnp14s9l.png"
+              // src="https://zenstatic.blob.core.windows.net/blog/p1cb8ot5dgi0i1jcl4011fnp14s9l.png"
+              src={slide.imageurl}
               alt="Relaxing Cat"
-              value={this.state.img}
+              // value={this.state.img}
             ></img>
           </div>
           <div className="container">
             <Timer />
           </div>
-
-          <button onClick={this.onChangeItems}>Click</button>
         </main>
       </div>
     );

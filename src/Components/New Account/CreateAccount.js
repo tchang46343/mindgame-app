@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./CreateAccount.css";
 import { API_BASE_URL } from "../../config";
 
@@ -84,6 +85,14 @@ class NewAccount extends React.Component {
   render() {
     return (
       <div>
+        <nav className="accountNav">
+          <Link className="accountLinks" to="/">
+            Home Page
+          </Link>
+          <Link className="accountLinks" to="/slide/1">
+            Begin Game
+          </Link>
+        </nav>
         <header className="accountTitle"> Create A New Account</header>
 
         <form className="newUserSetup">

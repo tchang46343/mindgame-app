@@ -17,7 +17,7 @@ export default class App extends React.Component {
             <Route exact path="/" component={LandingPage} />
             <Route path="/newaccount" component={CreateAccount} />
             <Route path="/signin" component={Signin} />
-            <Route path="/newslide" component={MainScreen} />
+            <Route path="/slide/:slide_id" component={MainScreen} />
             <Route path="/results" component={ResultsPage} />
           </Switch>
         </ApplicationContextProvider>

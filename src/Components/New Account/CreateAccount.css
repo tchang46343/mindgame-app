@@ -1,3 +1,23 @@
+.accountNav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+}
+
+.accountLinks {
+  border: solid black;
+  border-width: thin;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  background-color: #a4d4ff;
+  padding: 5px;
+}
+
 .accountTitle {
   text-align: center;
   margin-top: 50px;
@@ -89,7 +109,6 @@
     width: 500px;
     height: 400px;
     box-shadow: 10px 10px 25px 15px grey;
-    background-color: white;
   }
   .firstName {
     display: block;
@@ -119,9 +138,9 @@
   }
   .userPassword {
     box-sizing: border-box;
-    width: 280px;
+    width: 200px;
     position: relative;
-    left: 25px;
+    left: 0px;
   }
   .showPassword {
     margin-left: 10px;
@@ -142,7 +161,6 @@
     width: 500px;
     height: 400px;
     box-shadow: 10px 10px 25px 15px grey;
-    background-color: white;
   }
   .firstName {
     display: block;
@@ -166,20 +184,21 @@
     margin-right: auto;
     margin-left: auto;
   }
+  .emailAddress {
+    width: 400px;
+  }
   .password {
     display: flex;
     flex-direction: row;
-    margin: auto;
   }
   .userPassword {
     box-sizing: border-box;
     width: 280px;
-    margin-right: auto;
-    margin-left: auto;
+    position: relative;
+    left: 0px;
   }
   .showPassword {
-    margin-left: 10px;
-    padding: 0 15px;
+    padding: 0 10px;
   }
   .newUser {
     box-sizing: border-box;
