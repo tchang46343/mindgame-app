@@ -3,7 +3,7 @@ import config from "../config";
 
 const UserApiService = {
   getUsers(userId) {
-    return fetch(`${config.API_BASE_URL}/users/${userId}`, {
+    return fetch(`${config.API_BASE_URL}/auth/login/+${userId}`, {
       headers: {
         authorization: `basic ${TokenService.getAuthToken()}`
       }
@@ -13,7 +13,7 @@ const UserApiService = {
   },
 
   getUsersId(userId) {
-    return fetch(`${config.API_BASE_URL}/users/${userId}`, {
+    return fetch(`${config.API_BASE_URL}/auth/login/${userId}`, {
       headers: {
         authorization: `basic ${TokenService.getAuthToken()}`
       }
@@ -22,15 +22,15 @@ const UserApiService = {
     );
   },
 
-  postUser(userId, text) {
-    return fetch(`${config.API_BASE_URL}/users/${userId}`, {
+  postUser(email, text) {
+    return fetch(`${config.API_BASE_URL}/auth/login`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        authorization: `basic ${TokenService.getAuthToken()}`
+        authorization: `bearer ${TokenService.getAuthToken()}`
       },
       body: JSON.stringify({
-        user_id: userId,
+        email: email,
         text
       })
     }).then(res =>

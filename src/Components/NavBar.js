@@ -10,7 +10,7 @@ export default class NavBar extends React.Component {
           <Link to="newaccount" className="NewAccount">
             Create Account
           </Link>
-          {/* <img src=""></img> */}
+
           <Link to="signin" className="Login">
             Sign In
           </Link>

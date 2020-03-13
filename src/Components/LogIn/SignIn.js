@@ -2,90 +2,71 @@ import React from "react";
 import TokenService from "../../services/token-services";
 import AuthApiService from "../../services/user-api-service";
 import "./SignIn.css";
-import { API_BASE_URL } from "../../config";
+import { Link } from "react-router-dom";
 
 class NewAccount extends React.Component {
-  //static contextType = context;
   constructor(props) {
     super(props);
     this.state = {
       email: "",
-      Password: "",
-      userId: "",
-      id: []
+      password: ""
     };
   }
-  componentDidMount() {
-    fetch(`${API_BASE_URL}users`)
-      .then(res => res.json())
-      .then(id => {
-        this.setState({
-          id
-        });
-      })
-      .catch(err => console.log(err));
-  }
+
   emailChanged(email) {
     this.setState({
       email
     });
   }
 
-  passwordChanged(Password) {
+  passwordChanged(password) {
     this.setState({
-      Password
+      password
     });
   }
-  generateIdOptions = e => {
-    const userIds = this.state.id;
-    console.log(userIds);
-    return userIds.map(id => {
-      return (
-        <option key={id.id} value={id.name}>
-          {id.id}
-          {id.name}
-        </option>
-      );
-    });
-  };
 
   handleSubmitBasicAuth = e => {
     e.preventDefault();
     this.setState({ error: null });
-    const { email, Password } = e.target;
+    const { email, password } = e.target;
+    console.log(email);
     AuthApiService.postUser({
       email: email.value,
-      Password: Password.value
+      password: password.value
     })
       .then(res => {
         email.value = "";
-        Password.value = "";
+        password.value = "";
         TokenService.saveAuthToken(res.saveAuthToken);
         this.props.onLoginSucess();
       })
       .catch(res => {
         this.setState({ error: res.error });
       });
-    //articleservices
   };
 
   render() {
-    const idOptions = this.generateIdOptions();
     return (
       <div>
+        <nav className="accountNav">
+          <Link className="accountLinks" to="/">
+            Home Page
+          </Link>
+          <Link className="accountLinks" to="/slide/1">
+            Begin Game
+          </Link>
+        </nav>
         <header className="Sign-In"> Account Login </header>
 
         <form className="NewUserSetup" onSubmit={this.handleSubmitBasicAuth}>
           <header className="EmailTag"> User Email:</header>
-          <select
+          <input
             className="email"
             required
             name="email"
             value={this.state.userId}
             onChange={e => this.emailChanged(e.target.value)}
-          >
-            {idOptions}
-          </select>
+          ></input>
           <header className="PasswordTag"> Password:</header>
           <input
             placeholder="Password"
@@ -93,7 +74,7 @@ class NewAccount extends React.Component {
             className="PasswordEntry"
             type="Password"
             name="Password"
-            value={this.state.Password}
+            value={this.state.password}
             onChange={e => this.passwordChanged(e.target.value)}
           />
 
