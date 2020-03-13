@@ -63,8 +63,8 @@ class NewAccount extends React.Component {
             "Something went wrong please try to submit you request again."
           );
         }
-        return res.send(
-          `Success!!! Welcome ${firstname} you are now a memeber of Motivate the Mind`
+        return alert(
+          `Success!!! Welcome ${firstname} you are now a member of Motivate the Mind`
         );
       })
       .then(data => {
