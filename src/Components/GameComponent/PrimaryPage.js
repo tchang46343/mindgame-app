@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import DisplaySlide from "./DisplaySlide";
-import Results from "../EndGame/ResultsPage";
+
 import "./PrimaryPage.css";
 import { ApplicationContext } from "../../context";
 
@@ -14,25 +14,14 @@ class MainScreen extends React.Component {
     };
   }
   increment = () => {
-    if (this.state.count >= 10) {
-      return <Results />;
+    if (this.state.count >= 9) {
+      this.props.history.push("/results");
     } else {
       this.setState({
         count: this.state.count + 1
       });
     }
-    // this.setState({
-    //   count: this.state.count + 1
-    // });
   };
-
-  // gameFinished = () => {
-  //   const gameCounter = this.state.count;
-  //   //console.log(gameCounter);
-  //   if (gameCounter >= 10) {
-  //     return <Results />;
-  //   }
-  // };
 
   render() {
     const slideId = parseInt(this.props.match.params.slide_id);
@@ -61,4 +50,4 @@ class MainScreen extends React.Component {
   }
 }
 
-export default MainScreen;
+export default withRouter(MainScreen);
