@@ -47,7 +47,7 @@ class NewAccount extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="all">
         <nav className="accountNav">
           <Link className="accountLinks" to="/">
             Home Page
@@ -56,30 +56,37 @@ class NewAccount extends React.Component {
             Begin Game
           </Link>
         </nav>
-        <header className="Sign-In"> Account Login </header>
+        <div className="mainContainerSignIn">
+          <header className="Sign-In"> Account Login </header>
+          <p className="demoCred">
+            {" "}
+            The credential example are for test purposes ONLY.<br></br>{" "}
+            Username: testuser@gmail.com and Password: test1{" "}
+          </p>
+          <form className="NewUserSetup" onSubmit={this.handleSubmitBasicAuth}>
+            <header className="EmailTag"> User Email:</header>
+            <input
+              className="email"
+              required
+              name="email"
+              placeholder="test@gmail.com"
+              value={this.state.userId}
+              onChange={e => this.emailChanged(e.target.value)}
+            ></input>
+            <header className="PasswordTag"> Password:</header>
+            <input
+              placeholder="Password"
+              required
+              className="PasswordEntry"
+              type="Password"
+              name="Password"
+              value={this.state.password}
+              onChange={e => this.passwordChanged(e.target.value)}
+            />
 
-        <form className="NewUserSetup" onSubmit={this.handleSubmitBasicAuth}>
-          <header className="EmailTag"> User Email:</header>
-          <input
-            className="email"
-            required
-            name="email"
-            value={this.state.userId}
-            onChange={e => this.emailChanged(e.target.value)}
-          ></input>
-          <header className="PasswordTag"> Password:</header>
-          <input
-            placeholder="Password"
-            required
-            className="PasswordEntry"
-            type="Password"
-            name="Password"
-            value={this.state.password}
-            onChange={e => this.passwordChanged(e.target.value)}
-          />
-
-          <button className="VerifyAccount">Log In</button>
-        </form>
+            <button className="VerifyAccount">Log In</button>
+          </form>
+        </div>
       </div>
     );
   }

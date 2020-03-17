@@ -1,3 +1,24 @@
+.all {
+  height: 80%;
+}
+.mainContainerSignIn {
+  border: solid black;
+  border-width: thin;
+  border-radius: 5px;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  background-color: #a4d4ff;
+  padding: 5px;
+  margin: 15% 0px;
+}
+
+.demoCred {
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+}
+
 .accountLinks {
   border: solid black;
   border-width: thin;
@@ -35,7 +56,7 @@
 .email {
   display: block;
   box-sizing: border-box;
-  width: 300px;
+  width: 80%;
   height: 30px;
   margin-right: auto;
   margin-left: auto;
@@ -51,7 +72,7 @@
 .PasswordEntry {
   display: block;
   box-sizing: border-box;
-  width: 300px;
+  width: 80%;
   height: 30px;
   margin-right: auto;
   margin-left: auto;
@@ -86,11 +107,33 @@
   background-color: gold;
 }
 @media screen and (min-width: 600px) {
+  .mainContainerSignIn {
+    border: solid black;
+    border-width: thin;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    background-color: #a4d4ff;
+    padding: 20px;
+    margin: 5% 20%;
+    width: auto;
+    height: 500px;
+  }
+
   .email {
     margin: auto;
+    width: 60%;
+  }
+  .PasswordTag {
+    padding-top: 25px;
+  }
+  .EmailTag {
+    padding-bottom: 15px;
   }
   .PasswordEntry {
     margin: auto;
+    width: 60%;
   }
 
   .VerifyAccount {
@@ -98,5 +141,11 @@
     font-size: 26px;
     font-weight: bold;
     box-shadow: 20px 20px 10px grey;
+    margin-top: 5%;
+  }
+  .demoCred {
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
   }
 }
