@@ -3,7 +3,6 @@ import TokenService from "../../services/token-services";
 import AuthApiService from "../../services/user-api-service";
 import "./SignIn.css";
 import { Link } from "react-router-dom";
-
 class NewAccount extends React.Component {
   constructor(props) {
     super(props);
@@ -28,17 +27,15 @@ class NewAccount extends React.Component {
   handleSubmitBasicAuth = e => {
     e.preventDefault();
     this.setState({ error: null });
-    const { email, password } = e.target;
-    console.log(email);
+    const { email, password } = this.state;
+
     AuthApiService.postUser({
-      email: email.value,
-      password: password.value
+      email: email,
+      password: password
     })
       .then(res => {
-        email.value = "";
-        password.value = "";
-        TokenService.saveAuthToken(res.saveAuthToken);
-        this.props.onLoginSucess();
+        TokenService.saveAuthToken(res.authToken);
+        this.props.history.push("/");
       })
       .catch(res => {
         this.setState({ error: res.error });

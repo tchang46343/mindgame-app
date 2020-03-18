@@ -8,6 +8,7 @@ class ApplicationContextProvider extends Component {
     super(props);
     this.state = {
       gameslides: [],
+      user: [],
       filter: {
         word: "",
         quote: "",
@@ -17,7 +18,7 @@ class ApplicationContextProvider extends Component {
   }
 
   componentDidMount() {
-    fetch(`${API_BASE_URL}gameslides`)
+    fetch(`${API_BASE_URL}/gameslides`)
       .then(response => response.json())
       .then(results => {
         this.setState({
@@ -42,7 +43,8 @@ class ApplicationContextProvider extends Component {
       imageurl,
       filter,
       gameslides,
-      updateFilter: this.updateFilter
+      updateFilter: this.updateFilter,
+      onLoginSuccess: this.onLoginSuccess
     };
     return (
       <ApplicationContext.Provider value={value}>

@@ -1,9 +1,11 @@
 import TokenService from "../services/token-services";
-import config from "../config";
+import { API_BASE_URL } from "../config";
+//import config from "../config";
 
 const UserApiService = {
   getUsers(userId) {
-    return fetch(`${config.API_BASE_URL}/auth/login/+${userId}`, {
+    console(userId);
+    return fetch(`${API_BASE_URL}/auth/login/+${userId}`, {
       headers: {
         authorization: `basic ${TokenService.getAuthToken()}`
       }
@@ -13,7 +15,7 @@ const UserApiService = {
   },
 
   getUsersId(userId) {
-    return fetch(`${config.API_BASE_URL}/auth/login/${userId}`, {
+    return fetch(`${API_BASE_URL}/auth/login/+${userId}`, {
       headers: {
         authorization: `basic ${TokenService.getAuthToken()}`
       }
@@ -22,17 +24,14 @@ const UserApiService = {
     );
   },
 
-  postUser(email, text) {
-    return fetch(`${config.API_BASE_URL}/auth/login`, {
+  postUser(info) {
+    return fetch(`${API_BASE_URL}/auth/login`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
         authorization: `bearer ${TokenService.getAuthToken()}`
       },
-      body: JSON.stringify({
-        email: email,
-        text
-      })
+      body: JSON.stringify(info)
     }).then(res =>
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
