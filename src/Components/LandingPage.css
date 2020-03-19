@@ -2,6 +2,9 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Merriweather&display=swap");
 
+body {
+  overflow: hidden;
+}
 .PrimaryContent {
   display: flex;
   flex-direction: column;

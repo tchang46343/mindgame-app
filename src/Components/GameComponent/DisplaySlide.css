@@ -1,5 +1,5 @@
 .HeadSpace {
-  display: grid;
+  display: inline-table;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: minmax(10px auto);
   grid-gap: 2px;
@@ -39,6 +39,24 @@
   text-align: center;
 }
 .FunnyImage {
-  width: 100%;
-  height: auto;
+  display: block;
+  width: 210px;
+  height: 115px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 500px) {
+  .HeadSpace {
+    display: grid;
+    padding: 15px;
+    margin: 15px;
+  }
+  .FunnyImage {
+    display: block;
+    width: 80%;
+    height: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
