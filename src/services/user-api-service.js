@@ -28,7 +28,7 @@ const UserApiService = {
     return fetch(`${API_BASE_URL}/auth/login`, {
       method: "POST",
       headers: {
-        "content-type": "application/json",
+        "Content-Type": "application/json",
         authorization: `bearer ${TokenService.getAuthToken()}`
       },
       body: JSON.stringify(info)

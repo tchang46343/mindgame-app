@@ -56,7 +56,7 @@ class NewAccount extends React.Component {
       }
     };
 
-    fetch(`${API_BASE_URL}users`, options)
+    fetch(`${API_BASE_URL}/users`, options)
       .then(res => {
         if (!res.ok) {
           throw new Error(
