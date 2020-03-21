@@ -35,7 +35,7 @@ class NewAccount extends React.Component {
     })
       .then(res => {
         TokenService.saveAuthToken(res.authToken);
-        this.props.history.push("/");
+        this.props.history.push("/slide/1");
       })
       .catch(res => {
         this.setState({ error: res.error });
