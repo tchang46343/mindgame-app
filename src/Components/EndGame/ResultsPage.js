@@ -1,5 +1,6 @@
 import React from "react";
 import "./ResultsPage.css";
+import { Link } from "react-router-dom";
 
 class GameResults extends React.Component {
   constructor(props) {
@@ -19,6 +20,10 @@ class GameResults extends React.Component {
           help us grow our community base. More feature are soon to come in the
           future! Stay tune!
         </p>
+
+        <Link className="playAgain" to="/">
+          Play Again
+        </Link>
       </div>
     );
   }
